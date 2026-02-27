@@ -1,0 +1,129 @@
+/* الإعدادات العامة للموقع */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f7f6; /* لون خلفية باهت ومتناسق */
+    color: #333;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    padding: 10px 0;
+}
+
+/* تصميم الرأس (Header) */
+header {
+    background-color: #ffffff; /* خلفية بيضاء نقية */
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05); /* ظل خفيف جدًا */
+    height: 100px; /* الارتفاع الأولي */
+    display: flex;
+    align-items: center;
+}
+
+/* تصميم الشعار (Logo) */
+.logo {
+    font-size: 32px; /* الحجم الأولي الكبير */
+    font-weight: bold;
+    color: #00d4ff; /* لون الذكاء الاصطناعي الباهي */
+    transition: all 0.3s ease-in-out;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%); /* التمركز في المنتصف */
+    white-space: nowrap;
+}
+
+.logo-expert {
+    color: #0b0e14; /* لون داكن وأنيق */
+}
+
+/* تنسيق القائمة والشرطات */
+.menu-icon {
+    display: none; /* مخفية في البداية */
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: #0b0e14;
+    margin: 4px 0;
+    transition: 0.4s;
+}
+
+.nav-menu {
+    display: flex; /* تظهر كقائمة أفقية على الشاشات الكبيرة */
+}
+
+.nav-menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.nav-menu li a {
+    text-decoration: none;
+    color: #0b0e14;
+    padding: 10px 15px;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+.nav-menu li a:hover {
+    color: #00d4ff;
+}
+
+/* تأثير التمرير للأسفل (Scrolled State) */
+header.scrolled {
+    height: 60px; /* الارتفاع المصغر */
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+header.scrolled .logo {
+    font-size: 20px; /* الحجم الصغير */
+    left: 20px;
+    transform: none; /* الانتقال إلى اليسار */
+}
+
+header.scrolled .menu-icon {
+    display: block; /* ظهور الشرطات */
+    position: absolute;
+    right: 20px;
+    transform: scale(0.8); /* تصغير حجم الشرطات لتتناسب مع الشعار */
+}
+
+header.scrolled .nav-menu {
+    display: none; /* إخفاء القائمة الأفقية وظهور القائمة المنسدلة */
+}
+
+/* تصميم المحتوى للتجربة */
+.content {
+    margin-top: 120px;
+    padding: 20px;
+    text-align: center;
+}
+
+/* تحسينات للشاشات الصغيرة والمتوسطة (Responsiveness) */
+@media (max-width: 768px) {
+    .nav-menu {
+        display: none; /* إخفاء القائمة الأفقية دائماً على الموبايل */
+    }
+
+    .logo {
+        font-size: 24px;
+    }
+
+    /* يمكنك إضافة المزيد من التنسيقات للقائمة المنسدلة هنا */
+}
