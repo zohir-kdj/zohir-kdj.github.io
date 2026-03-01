@@ -4,65 +4,128 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Expert AI | Tech & Wellness Intelligence</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #0b0e14;
+            --card: #161b22;
+            --cyan: #00d4ff;
+            --text: #e6edf3;
+            --dim: #adb5bd;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { background: var(--bg); color: var(--text); font-family: 'Inter', sans-serif; line-height: 1.6; }
+        .container { width: 90%; max-width: 1200px; margin: 0 auto; }
+
+        /* Header */
+        header { 
+            position: fixed; top: 0; width: 100%; z-index: 1000; 
+            background: rgba(11, 14, 20, 0.9); backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(0, 212, 255, 0.1); padding: 15px 0;
+        }
+        .nav-flex { display: flex; justify-content: space-between; align-items: center; }
+        .logo a { font-size: 1.8rem; font-weight: 800; text-decoration: none; color: #fff; }
+        .nav-links a { color: var(--text); text-decoration: none; margin-left: 20px; font-weight: 500; }
+        .nav-links a:hover { color: var(--cyan); }
+
+        /* Hero */
+        .hero { padding: 160px 0 60px; text-align: center; }
+        .hero h1 { font-size: clamp(2.5rem, 6vw, 4rem); margin-bottom: 15px; }
+        .cyan-txt { color: var(--cyan); }
+
+        /* Grid System */
+        .section-title { margin-bottom: 40px; border-left: 4px solid var(--cyan); padding-left: 15px; }
+        #dynamic-grid { 
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+            gap: 30px; margin-bottom: 80px;
+        }
+
+        /* Card Design */
+        .card { 
+            background: var(--card); border-radius: 15px; overflow: hidden; 
+            border: 1px solid rgba(255,255,255,0.05); transition: 0.3s; cursor: pointer;
+        }
+        .card:hover { transform: translateY(-10px); border-color: var(--cyan); box-shadow: 0 10px 30px rgba(0,212,255,0.2); }
+        .card img { width: 100%; height: 200px; object-fit: cover; }
+        .card-content { padding: 20px; }
+        .tag { color: var(--cyan); font-size: 0.7rem; font-weight: bold; text-transform: uppercase; }
+        .card h3 { margin: 10px 0; font-size: 1.3rem; }
+        .card p { color: var(--dim); font-size: 0.9rem; margin-bottom: 15px; }
+        .read-more { color: var(--cyan); font-weight: bold; text-decoration: none; font-size: 0.85rem; }
+
+        footer { text-align: center; padding: 40px 0; border-top: 1px solid rgba(255,255,255,0.05); color: var(--dim); }
+
+        @media (max-width: 768px) { .nav-links { display: none; } }
+    </style>
 </head>
-<body class="dark-theme">
+<body>
 
-    <header class="main-header" id="header">
-        <div class="container">
-            <div class="logo">
-                <a href="index.html">
-                    <span class="text-white">Expert</span><span class="text-cyan">AI</span>
-                </a>
-            </div>
-            
-            <nav class="desktop-nav">
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">Insights</a></li>
-                    <li><a href="privacy.html">Privacy</a></li>
-                    <li><a href="contact.html" class="cta-small">Contact</a></li>
-                </ul>
+    <header>
+        <div class="container nav-flex">
+            <div class="logo"><a href="index.html">Expert<span class="cyan-txt">AI</span></a></div>
+            <nav class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">Insights</a>
+                <a href="privacy.html">Privacy</a>
+                <a href="contact.html">Contact</a>
             </nav>
-
-            <div class="mobile-toggle" id="mobile-menu-btn">
-                <span></span><span></span><span></span>
-            </div>
-        </div>
-        
-        <div class="mobile-nav" id="mobile-nav">
-            <a href="index.html">Home</a>
-            <a href="about.html">Insights</a>
-            <a href="privacy.html">Privacy</a>
-            <a href="contact.html">Contact</a>
         </div>
     </header>
 
-    <section class="hero">
-        <div class="container">
-            <h1 class="fade-in">Decoding the <span class="text-cyan">Future</span></h1>
-            <p>Advanced Analysis on AI, Human Psychology, and Biological Systems.</p>
-        </div>
-    </section>
+    <main class="container">
+        <section class="hero">
+            <h1>Decoding the <span class="cyan-txt">Future</span></h1>
+            <p style="color: var(--dim);">Expert Analysis on Tech, Psychology, and Wellness.</p>
+        </section>
 
-    <section class="articles-section">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="cyan-border-left">Latest Research</h2>
+        <h2 class="section-title">TRENDING INSIGHTS</h2>
+        <div id="dynamic-grid">
             </div>
-            
-            <div id="dynamic-grid" class="grid-container">
-                </div>
-        </div>
-    </section>
+    </main>
 
-    <footer class="main-footer">
-        <div class="container">
-            <p>&copy; 2026 Expert AI Portfolio. Built for Intelligence.</p>
-        </div>
+    <footer>
+        <p>&copy; 2026 Expert AI Portfolio | Intelligence Driven.</p>
     </footer>
 
-    <script src="script.js"></script>
+    <script>
+        // مصفوفة البيانات مدمجة هنا لضمان السرعة
+        const articles = [
+            {
+                title: "Audifort: Advanced Hearing Science",
+                desc: "An analytical review on natural auditory triggers and neural health in modern environments.",
+                img: "https://drive.google.com/thumbnail?id=17RoGQoc9n9Xkehndpa0yA-YGapTNsXFk",
+                link: "audifort-review.html",
+                cat: "Wellness"
+            },
+            {
+                title: "The Hero Instinct Decoding",
+                desc: "A psychological study on male commitment triggers and evolutionary relationship drives.",
+                img: "https://s3.amazonaws.com/bei/hso/Products/HSO_Book_Phone.png",
+                link: "secret-obsession.html",
+                cat: "Psychology"
+            }
+        ];
+
+        function loadGrid() {
+            const grid = document.getElementById('dynamic-grid');
+            if(!grid) return;
+            
+            grid.innerHTML = articles.map(post => `
+                <div class="card" onclick="window.location.href='${post.link}'">
+                    <img src="${post.img}" alt="${post.title}">
+                    <div class="card-content">
+                        <span class="tag">${post.cat}</span>
+                        <h3>${post.title}</h3>
+                        <p>${post.desc}</p>
+                        <span class="read-more">Read Full Analysis →</span>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        // تشغيل فوري
+        document.addEventListener('DOMContentLoaded', loadGrid);
+    </script>
 </body>
 </html>
