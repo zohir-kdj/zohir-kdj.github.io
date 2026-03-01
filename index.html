@@ -3,62 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Expert AI | Global Solutions</title>
+    <title>Expert AI | Technology & Wellness Insights</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* تحسينات بصرية سريعة لضمان التناسق */
+        .article-card:hover { transform: translateY(-10px); box-shadow: 0 10px 30px rgba(0, 212, 255, 0.2); }
+        .article-card { transition: all 0.3s ease; border-radius: 12px; overflow: hidden; background: #1e293b; border: 1px solid rgba(0, 212, 255, 0.1); }
+        .article-img { width: 100%; height: 200px; object-fit: cover; }
+        .article-body { padding: 20px; text-align: left; }
+    </style>
 </head>
 <body>
-
     <header id="main-header">
         <div class="header-container">
             <div class="logo" id="site-logo">
-    <a href="index.html" style="text-decoration: none; display: flex; align-items: center; gap: 0;">
-        <span class="expert">Expert</span><span class="ai">AI</span>
-    </a>
+                <a href="index.html" style="text-decoration: none; display: flex; align-items: center;">
+                    <span class="expert">Expert</span><span class="ai">AI</span>
+                </a>
             </div>
-            
-
-            <div class="hamburger" id="hamburger-menu">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
+            <div class="hamburger" id="hamburger-menu"><span class="bar"></span><span class="bar"></span><span class="bar"></span></div>
         </div>
-
         <nav class="dropdown-nav" id="dropdown-nav">
-    <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About Project</a></li>
-        <li><a href="privacy.html">Privacy Policy</a></li>
-        <li><a href="contact.html">Contact Us</a></li>
-        <li><a href="terms.html">Terms & Conditions</a></li>
-    </ul>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Project</a></li>
+                <li><a href="privacy.html">Privacy Policy</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
         </nav>
-        
     </header>
 
-        <main class="content" style="padding-top: 150px; padding-bottom: 50px;">
-        <section id="hero" style="margin-bottom: 60px;">
-            <h1 style="font-size: 3.5rem; color: #ffffff;">Welcome to <span style="color: #00d4ff;">Expert AI</span></h1>
-            <p style="font-size: 1.2rem; color: #adb5bd;">Decoding Technology, Psychology, and the Future.</p>
+    <main class="content" style="padding-top: 150px; padding-bottom: 80px;">
+        <section id="hero" style="text-align: center; margin-bottom: 70px;">
+            <h1 style="font-size: clamp(2.5rem, 5vw, 4rem); color: #ffffff; margin-bottom: 15px;">Decoding The <span style="color: #00d4ff;">Future</span></h1>
+            <p style="color: #adb5bd; font-size: 1.2rem; max-width: 600px; margin: 0 auto;">Expert analysis on AI technology, human psychology, and biological wellness.</p>
         </section>
 
-        <section id="featured-offers" style="width: 90%; max-width: 1000px; margin: 0 auto;">
-            <h2 style="color: #00d4ff; text-align: left; margin-bottom: 30px; border-bottom: 2px solid #1e293b; padding-bottom: 10px;">Featured Insights & Tools</h2>
+        <section id="trending-section" style="width: 90%; max-width: 1200px; margin: 0 auto;">
+            <h2 style="color: #00d4ff; margin-bottom: 30px; border-left: 5px solid #00d4ff; padding-left: 15px; text-transform: uppercase; letter-spacing: 2px;">Trending Insights</h2>
             
-            <div class="product-card" style="display: flex; background: #1e293b; border-radius: 15px; overflow: hidden; border: 1px solid rgba(0, 212, 255, 0.1); transition: 0.3s; text-align: left;">
-                <div style="flex: 1; padding: 0;">
-                    <img src="https://s3.amazonaws.com/bei/hso/Products/HSO_Book_Phone.png" alt="Relationship Science" style="width: 100%; height: 100%; object-fit: cover;">
+            <div id="articles-container" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px;">
                 </div>
-                <div style="flex: 2; padding: 30px; display: flex; flex-direction: column; justify-content: center;">
-                    <span style="background: #00d4ff; color: #0b0e14; padding: 5px 12px; border-radius: 5px; font-size: 0.8rem; font-weight: bold; width: fit-content; margin-bottom: 15px;">PSYCHOLOGY & DATA</span>
-                    <h3 style="color: #ffffff; font-size: 1.8rem; margin-bottom: 15px;">The Hero Instinct: Decoding Human Commitment</h3>
-                    <p style="color: #adb5bd; margin-bottom: 20px;">Explore the 12-year psychological study that identifies the biological drive behind male commitment and priority.</p>
-                    <a href="secret-obsession.html" style="display: inline-block; background: transparent; border: 2px solid #00d4ff; color: #00d4ff; padding: 10px 25px; text-decoration: none; border-radius: 8px; font-weight: bold; transition: 0.3s;" onmouseover="this.style.background='#00d4ff'; this.style.color='#0b0e14';" onmouseout="this.style.background='transparent'; this.style.color='#00d4ff';">Read Full Analysis →</a>
-                </div>
-            </div>
         </section>
     </main>
-
 
     <script src="script.js"></script>
 </body>
